@@ -17,8 +17,10 @@
   <script src="../js/jquery.fullsizable.js"></script>
   <script>
     $(function() {
-      $('a').fullsizable({
-        detach_id: 'container'
+      $('#container').on('click', '#btn-trigger', function(){
+        $('#container a').fullsizable({
+          detach_id: 'container'
+        });
       });
 
       $(document).on('fullsizable:opened', function(){
@@ -62,6 +64,9 @@
             alt="Xysticus cristatus, A Estrada, Galicia, Spain"
             src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Fitness_Model_Britt_2007.JPG/100px-Fitness_Model_Britt_2007.JPG">
     </a>
+    <div>
+      <button id="btn-trigger">Launch!</button>
+    </div>
   </div>
 </body>
 </html>
